@@ -2,17 +2,17 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // Components
-import Header from "./Components/store/Header";
-import Footer from "./Components/store/Footer";
+import Header from "./Components/store/Header.jsx";
+import Footer from "./Components/store/Footer.jsx";
 
 // Pages
-import Home from "./Pages/Home";
-import Catalog from "./Pages/Catalog";
-import Checkout from "./Pages/Checkout";
-import ProductDetail from "./Pages/ProductDetail";
-import Profile from "./Pages/Profile";
-import Orders from "./Pages/Orders";
-import Wishlist from "./Pages/Wishlist";
+import Home from "./Pages/Home.jsx";
+import Catalog from "./Pages/Catalog.jsx";
+import Checkout from "./Pages/Checkout.jsx";
+import ProductDetail from "./Pages/ProductDetail.jsx";
+import Profile from "./Pages/Profile.jsx";
+import Orders from "./Pages/Orders.jsx";
+import Wishlist from "./Pages/Wishlist.jsx";
 
 function App() {
   return (
