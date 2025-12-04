@@ -1,0 +1,46 @@
+{
+  "name": "CartItem",
+  "type": "object",
+  "properties": {
+    "product_id": {
+      "type": "string",
+      "description": "ID do produto"
+    },
+    "product_name": {
+      "type": "string",
+      "description": "Nome do produto"
+    },
+    "product_image": {
+      "type": "string",
+      "description": "Imagem do produto"
+    },
+    "price": {
+      "type": "number",
+      "description": "Pre\u00e7o unit\u00e1rio"
+    },
+    "quantity": {
+      "type": "number",
+      "default": 1,
+      "description": "Quantidade"
+    },
+    "size": {
+      "type": "string",
+      "description": "Tamanho selecionado"
+    },
+    "color": {
+      "type": "string",
+      "description": "Cor selecionada"
+    },
+    "user_email": {
+      "type": "string",
+      "description": "Email do usu\u00e1rio"
+    }
+  },
+  "required": [
+    "product_id",
+    "product_name",
+    "price",
+    "quantity",
+    "user_email"
+  ]
+}

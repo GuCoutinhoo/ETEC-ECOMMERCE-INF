@@ -1,0 +1,103 @@
+{
+  "name": "Order",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string",
+      "description": "Email do cliente"
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "product_id": {
+            "type": "string"
+          },
+          "product_name": {
+            "type": "string"
+          },
+          "price": {
+            "type": "number"
+          },
+          "quantity": {
+            "type": "number"
+          },
+          "size": {
+            "type": "string"
+          },
+          "color": {
+            "type": "string"
+          }
+        }
+      },
+      "description": "Itens do pedido"
+    },
+    "subtotal": {
+      "type": "number",
+      "description": "Subtotal dos produtos"
+    },
+    "shipping_cost": {
+      "type": "number",
+      "description": "Custo do frete"
+    },
+    "total": {
+      "type": "number",
+      "description": "Total do pedido"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pendente",
+        "confirmado",
+        "enviado",
+        "entregue",
+        "cancelado"
+      ],
+      "default": "pendente",
+      "description": "Status do pedido"
+    },
+    "shipping_address": {
+      "type": "object",
+      "properties": {
+        "cep": {
+          "type": "string"
+        },
+        "street": {
+          "type": "string"
+        },
+        "number": {
+          "type": "string"
+        },
+        "complement": {
+          "type": "string"
+        },
+        "neighborhood": {
+          "type": "string"
+        },
+        "city": {
+          "type": "string"
+        },
+        "state": {
+          "type": "string"
+        }
+      },
+      "description": "Endere\u00e7o de entrega"
+    },
+    "payment_method": {
+      "type": "string",
+      "enum": [
+        "pix",
+        "cartao",
+        "boleto"
+      ],
+      "description": "M\u00e9todo de pagamento"
+    }
+  },
+  "required": [
+    "user_email",
+    "items",
+    "total",
+    "status"
+  ]
+}

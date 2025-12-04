@@ -1,0 +1,70 @@
+{
+  "name": "Product",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Nome do produto"
+    },
+    "description": {
+      "type": "string",
+      "description": "Descri\u00e7\u00e3o detalhada"
+    },
+    "price": {
+      "type": "number",
+      "description": "Pre\u00e7o em reais"
+    },
+    "original_price": {
+      "type": "number",
+      "description": "Pre\u00e7o original (para descontos)"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "camisetas",
+        "cal\u00e7as",
+        "vestidos",
+        "casacos",
+        "acess\u00f3rios",
+        "sapatos"
+      ],
+      "description": "Categoria do produto"
+    },
+    "sizes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Tamanhos dispon\u00edveis"
+    },
+    "colors": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Cores dispon\u00edveis"
+    },
+    "images": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "URLs das imagens"
+    },
+    "featured": {
+      "type": "boolean",
+      "default": false,
+      "description": "Produto em destaque"
+    },
+    "stock": {
+      "type": "number",
+      "default": 0,
+      "description": "Quantidade em estoque"
+    }
+  },
+  "required": [
+    "name",
+    "price",
+    "category"
+  ]
+}
